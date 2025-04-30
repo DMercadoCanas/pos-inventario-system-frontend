@@ -1,5 +1,3 @@
-"use client"
-
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import { useState, useEffect } from "react"
 import Login from "./pages/Login"
@@ -24,7 +22,7 @@ function App() {
 
       try {
         console.log("Validando token...")
-        const response = await fetch("http://localhost:3000/api/validate", {
+        const response = await fetch("https://pos-inventario-system-backend.onrender.com", {
           headers: { Authorization: `Bearer ${token}` },
         })
 
