@@ -4,6 +4,7 @@ import UserTable from "./UserTable"
 import AddUserModal from "./AddUserModal"
 import EditUserModal from "./EditUserModal"
 import DeleteConfirmModal from "./DeleteConfirmModal"
+import API_URL from "../../config/api"
 
 function UserManager() {
   const [users, setUsers] = useState([])
@@ -22,7 +23,7 @@ function UserManager() {
     setError(null)
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch("http://localhost:3000/api/users", {
+      const response = await fetch(`${API_URL}/api/users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -67,7 +68,7 @@ function UserManager() {
   const handleAddUser = async (newUser) => {
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch("http://localhost:3000/api/register", {
+      const response = await fetch(`${API_URL}/api/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +101,7 @@ function UserManager() {
   const handleEditUser = async (updatedUser) => {
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch(`http://localhost:3000/api/users/${updatedUser.id}`, {
+      const response = await fetch(`${API_URL}/api/users/${updatedUser.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -133,7 +134,7 @@ function UserManager() {
   const handleDeleteUser = async (id) => {
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch(`http://localhost:3000/api/users/${id}`, {
+      const response = await fetch(`${API_URL}/api/users/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

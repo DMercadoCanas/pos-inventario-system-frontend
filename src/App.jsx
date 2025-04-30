@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { useState, useEffect } from "react"
 import Login from "./pages/Login"
 import Dashboard from "./pages/Dashboard"
+import API_URL from "./config/api"
 
 function App() {
   const [authState, setAuthState] = useState({
@@ -22,7 +23,7 @@ function App() {
 
       try {
         console.log("Validando token...")
-        const response = await fetch("https://pos-inventario-system-backend.onrender.com", {
+        const response = await fetch(`${API_URL}/api/validate`, {
           headers: { Authorization: `Bearer ${token}` },
         })
 
