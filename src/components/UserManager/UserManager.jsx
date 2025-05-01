@@ -91,9 +91,11 @@ function UserManager() {
       // Actualizar la lista de usuarios
       fetchUsers()
       setShowAddModal(false)
+      return data
     } catch (err) {
       console.error("Error al añadir usuario:", err)
       alert(err.message)
+      throw err
     }
   }
 
@@ -209,7 +211,7 @@ function UserManager() {
         </div>
         <button
           onClick={() => setShowAddModal(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#5c4b44] text-white rounded-md hover:bg-[#4a3c37] transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[#5c4b44] text-white rounded-md hover:bg-[#4a3c37] transition-colors cursor-pointer"
         >
           <UserPlus className="h-4 w-4" />
           <span>Añadir Usuario</span>

@@ -83,7 +83,7 @@ function EditUserModal({ user, onClose, onEditUser }) {
       <div className="bg-white rounded-lg shadow-lg w-full max-w-md">
         <div className="flex justify-between items-center p-6 border-b border-gray-200">
           <h2 className="text-xl font-semibold text-[#5c4b44]">Editar Usuario</h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
+          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 cursor-pointer">
             <X className="h-5 w-5" />
           </button>
         </div>
@@ -145,7 +145,7 @@ function EditUserModal({ user, onClose, onEditUser }) {
                 name="role"
                 value={formData.role}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-[#5c4b44]"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-[#5c4b44] cursor-pointer"
               >
                 <option value="admin">Administrador</option>
                 <option value="employee">Empleado</option>
@@ -159,7 +159,7 @@ function EditUserModal({ user, onClose, onEditUser }) {
                   id="changePassword"
                   checked={changePassword}
                   onChange={() => setChangePassword(!changePassword)}
-                  className="h-4 w-4 text-[#5c4b44] focus:ring-[#5c4b44] border-gray-300 rounded"
+                  className="h-4 w-4 text-[#5c4b44] focus:ring-[#5c4b44] border-gray-300 rounded cursor-pointer"
                 />
                 <label htmlFor="changePassword" className="ml-2 block text-sm text-gray-700">
                   Cambiar contraseña
@@ -212,13 +212,13 @@ function EditUserModal({ user, onClose, onEditUser }) {
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50"
+              className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer"
             >
               Cancelar
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-[#5c4b44] text-white rounded-md text-sm font-medium hover:bg-[#4a3c37]"
+              className="px-4 py-2 bg-[#5c4b44] text-white rounded-md text-sm font-medium hover:bg-[#4a3c37] cursor-pointer"
             >
               Guardar Cambios
             </button>

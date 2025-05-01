@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { MoreVertical, Edit, Trash2 } from "lucide-react"
 
@@ -78,7 +76,7 @@ function UserTable({ users = [], onEdit, onDelete }) {
                   <div className="relative">
                     <button
                       onClick={() => toggleMenu(user.id)}
-                      className="text-gray-400 hover:text-gray-600 focus:outline-none"
+                      className="text-gray-400 hover:text-gray-600 focus:outline-none cursor-pointer"
                     >
                       <MoreVertical className="h-5 w-5" />
                     </button>
@@ -89,7 +87,7 @@ function UserTable({ users = [], onEdit, onDelete }) {
                             onEdit(user)
                             setOpenMenuId(null)
                           }}
-                          className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                          className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left cursor-pointer"
                         >
                           <Edit className="h-4 w-4 mr-2" />
                           Editar
@@ -99,7 +97,7 @@ function UserTable({ users = [], onEdit, onDelete }) {
                             onDelete(user)
                             setOpenMenuId(null)
                           }}
-                          className="flex items-center px-4 py-2 text-sm text-red-600 hover:bg-gray-100 w-full text-left"
+                          className="flex items-center px-4 py-2 text-sm text-red-600 hover:bg-gray-100 w-full text-left cursor-pointer"
                         >
                           <Trash2 className="h-4 w-4 mr-2" />
                           Eliminar
