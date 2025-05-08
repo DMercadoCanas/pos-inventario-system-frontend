@@ -2,7 +2,7 @@
 
 Un sistema completo de Punto de Venta (POS) e Inventario diseñado para pequeños negocios y misceláneas. Permite gestionar ventas, inventario, usuarios y clientes de manera eficiente y sencilla.
 
-![Sistema POS + Inventario](https://via.placeholder.com/800x400?text=Sistema+POS+%2B+Inventario)
+![Sistema POS + Inventario](public/dashboard.png)
 
 ## 📋 Características
 
